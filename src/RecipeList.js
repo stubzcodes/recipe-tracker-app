@@ -1,23 +1,45 @@
 import React from "react";
 
-function RecipeList() {
-  
-  // TODO: Display the list of recipes using the structure of table that is provided.
+function RecipeList({ recipes, deleteRecipe }) {
+  // TODO: Display the list of recipes using the structure of the table that is provided.
   // TODO: Create at least one additional component that is used by this component.
   // TODO: Each recipe row must have a delete button - <button name="delete">Delete</button> - that deletes the post when clicked
+
+  const handleDelete = (index) => {
+    deleteRecipe(index);
+  };
+
+  const rows = recipes.map((formData, index) => (
+    <tr key={index}>
+      <td className="small_td">{formData.name}</td>
+      <td className="small_td">{formData.cuisine}</td>
+      <td className="small_td">
+        <img src={formData.photo} alt={formData.name} className="recipe-img" />
+      </td>
+      <td className="content_td">{formData.ingredients}</td>
+      <td className="content_td">{formData.preparation}</td>
+      <td className="small_td">
+        <button name="delete" onClick={() => handleDelete(index)}>
+          Delete
+        </button>
+      </td>
+    </tr>
+  ));
 
   return (
     <div className="recipe-list">
       <table>
         <thead>
           <tr>
-            <th></th>
-            <th>Actions</th>
+            <th className="small_th">Name</th>
+            <th className="small_th">Cuisine</th>
+            <th className="small_th">Photo</th>
+            <th className="content_td">Ingredients</th>
+            <th className="content_td">Preparation</th>
+            <th className="small_th">Actions</th>
           </tr>
         </thead>
-        <tbody>
-        
-        </tbody>
+        <tbody>{rows}</tbody>
       </table>
     </div>
   );

@@ -20,7 +20,7 @@ html {
 }
 
 thead th, tfoot th {
-  font-family: 'Rock Salt';
+  font-family: 'Lato', sans-serif;
 }
 
 th {
@@ -33,8 +33,16 @@ td {
   overflow-x:hidden;
   overflow-y:hidden;
   font-size: 12px;
-  padding: 10px;
+  padding: 30px;
   text-align: center;
+}
+
+textarea::placeholder {
+  font-family: monospace;
+}
+
+input::placeholder{
+  font-family: monospace;
 }
 
 /* table */
@@ -54,7 +62,60 @@ table {
   text-overflow: ellipsis;
 }
 
-/* Column Size for thead */
 
 
-/* Column size for tbody */
+.recipe-img {
+  width: 100%;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #EAD5E6;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 60px;
+}
+
+.recipe-list {
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+
+}
+
+.text-box {
+  width: 85%
+}
+
+input {
+  
+  width: 85%;
+  
+}
+
+td {
+  align-items: center;
+  
+}
+
+/* Column Size for thead and body, and create recipe*/
+.content_td {
+  width: 30%;
+}
+
+.small_th {
+  width: 10%;
+}
+
+.create_small {
+  width: 7%
+}
+
+.create_lg {
+  width: 26%
+}
+
+
+
+
