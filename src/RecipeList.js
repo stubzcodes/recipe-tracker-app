@@ -31,12 +31,12 @@ function RecipeList({ recipes, deleteRecipe }) {
       <table>
         <thead>
           <tr>
-            <th className="small_th">Name</th>
-            <th className="small_th">Cuisine</th>
-            <th className="small_th">Photo</th>
-            <th className="content_td">Ingredients</th>
-            <th className="content_td">Preparation</th>
-            <th className="small_th">Actions</th>
+            <th className="small_th heading">Name</th>
+            <th className="small_th heading">Cuisine</th>
+            <th className="small_th heading">Photo</th>
+            <th className="content_td heading">Ingredients</th>
+            <th className="content_td heading">Preparation</th>
+            <th className="small_th heading">Actions</th>
           </tr>
         </thead>
         <tbody>{rows}</tbody>

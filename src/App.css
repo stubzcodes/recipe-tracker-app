@@ -109,7 +109,7 @@ td {
 }
 
 .create_small {
-  width: 7%
+  width: 10%
 }
 
 .create_lg {
@@ -117,5 +117,11 @@ td {
 }
 
 
+@media (max-width: 1101px){
 
+  .heading {
+    font-size: 15px;
+  }
+
+}
 

@@ -32,7 +32,7 @@ function RecipeCreate({createRecipe}) {
       <table>
         <tbody>
           <tr>
-            <td className="create_small">
+            <td className="small_th">
               <input 
                 type="text" 
                 id="name" 
@@ -40,9 +40,10 @@ function RecipeCreate({createRecipe}) {
                 value={formState.name}
                 onChange={handleChange}
                 placeholder="Name"
+                required
               />
             </td>
-            <td className="create_small">
+            <td className="small_th">
               <input 
                 type="text" 
                 id="cuisine" 
@@ -50,9 +51,10 @@ function RecipeCreate({createRecipe}) {
                 value={formState.cuisine}
                 onChange={handleChange}
                 placeholder="Cuisine"
+                required
               />
             </td>
-            <td className="create_small">
+            <td className="small_th">
               <input 
                 type="url" 
                 id="photo" 
@@ -60,9 +62,10 @@ function RecipeCreate({createRecipe}) {
                 value={formState.photo}
                 onChange={handleChange}
                 placeholder="URL"
+                required
               />
             </td>
-            <td className="create_lg">
+            <td className="content_td">
               <textarea  
                 className="text-box"
                 id="ingredients" 
@@ -70,9 +73,10 @@ function RecipeCreate({createRecipe}) {
                 value={formState.ingredients}
                 onChange={handleChange}  
                 placeholder="Ingredients"
+                required
               />
             </td>
-            <td className="create_lg">
+            <td className="content_td">
               <textarea 
                 className="text-box"
                 id="preparation" 
@@ -80,9 +84,10 @@ function RecipeCreate({createRecipe}) {
                 value={formState.preparation}
                 onChange={handleChange}
                 placeholder="Preparation"
+                required
               />
             </td>
-            <td className="create_sm"> 
+            <td className="small_th"> 
               <button type="submit">Create</button>
             </td>
           </tr>
